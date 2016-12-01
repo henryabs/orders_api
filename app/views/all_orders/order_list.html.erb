@@ -1,0 +1,19 @@
+<table class="w3-table w3-small w3-hoverable" style="width:40%">
+	<tr>
+		<th>Order #</th>
+		<th>UID</th>
+		<th>SKU</th>
+		<th>Quantity</th>
+		<th>Status</th>
+	</tr>
+	<% @list = OrderList.all %>
+	<% @list.each do |list| %>
+		<tr>
+			<td><%= list.order_number %></td>
+			<td><%= list.uid %></td>
+			<td><%= list.sku %></td>
+			<td><%= list.quantity %></td>
+			<td><%= list.status %></td>
+		</tr>
+	<% end %>
+</table>

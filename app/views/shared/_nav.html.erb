@@ -1,0 +1,22 @@
+<div class="w3-dropdown-hover">
+<%= link_to 'GET data',root_path,:class =>'w3-btn w3-red w3-small',:action =>'home'%>
+
+		<div class="w3-dropdown-content">
+			<%= link_to "Order (#{Order.count})",orders_path,:class =>'w3-btn w3-red w3-small',:action =>'order' %>
+
+			<%= link_to "Order Product (#{OrderProduct.count})",order_product_path,:class =>'w3-btn w3-red w3-small',:action =>'order_product' %>
+
+			<%= link_to "Product (#{Product.count})",product_path,:class =>'w3-btn w3-red w3-small',:action =>'product' %>
+
+			<%= link_to "Order History (#{OrderHistory.count})",order_history_path,:class =>'w3-btn w3-red w3-small' %>
+
+			<%= link_to "Get All data",get_all_path,:class =>'w3-btn w3-green w3-small',:action => 'get_all' %>
+			
+			<%= link_to "Delete All",delete_all_path,:class =>'w3-btn w3-deep-orange w3-small',:action => 'delete_all' %>
+		</div>
+	
+</div>
+<%= link_to "Order List (#{OrderList.count})",order_list_path,:class =>'w3-btn w3-blue w3-small',:action => 'order_list' %>
+
+<%= link_to "Order List extracted from quantity (#{OrderListX.count})",orders_extracted_path,:class =>'w3-btn w3-blue w3-small',:action => 'orders_extracted' %>
+
